@@ -118,3 +118,139 @@ https://www.freecodecamp.org/learn/back-end-development-and-apis/
 What is a database? (데이터베이스란 무엇인가요?)
 - ✔ Interface to save data in a persistent way to memory (데이터를 메모리에 영구적으로 저장하는 인터페이스)
 - Interface to communicate between different software components. (서로 다른 소프트웨어 구성 요소 간의 통신을 위한 인터페이스.)
+
+### 2 - What is a Blockchain? (LearnWeb3)
+    블록체인은 안전하고 투명한 방식으로 거래를 기록하고 데이터를 저장하는데 사용되는 분산형 디지털 불변의 원장
+    분산된 노드 네트워크를 기반으로 하며, 노드 네트워크는 단일 진실 소스를 공동으로 유지하며 참여자가 중개자 없이도 시스템과 상호작용할 수 있도록 한다.
+
+    블록은 공개 원장인 블록체인에 포함하기 위해서 트랜잭션을 집계하는 컨테이너 구조
+    체인의 각 블록에는 합의로 알려진 프로세스를 통해서 노드 네트워크에 의하여 확인되고 기록된 트랜잭션이 포함
+    블록이 체인에 추가되면 변경하거나 삭제 불가능
+    네트워크의 모든 트랜잭션에 대한 불변의 기록이 생성
+
+    블록체인을 만든 개인 또는 그룹은 나카모토 사토시로 2009년에 비트코인 네트워크를 공개하면서 대중화함
+    비트코인은 암호 화폐 네트워크이며 신뢰할 수 있는 중개인이나 기관 없이 네트워크를 통해 BTC 자산의 전송을 주로 처리하는 동시에
+    네트워크 자체가 안전하고 해킹할 수 없도록 보장
+
+    < 문제 >
+    Who created Bitcoin? (비트코인은 누가 만들었나요?)
+    - ✔ Satoshi Nakamoto (사토시 나카모토)
+    - Craig Wright (크레이그 라이트)
+    - John McAfee (존 맥아피)
+
+    시간이 지남에 따라서 비트코인의 설계는 이더리움과 같이 뛰어난 기능을 갖춘 다른 블록체인 네트워크의 출현에 영감을 주었습니다.
+
+    < 문제 >
+    What is a blockchain? (블록체인이란 무엇인가요?)
+    - A cryptocurrency (암호화폐)
+    - ✔ A distributed database running on a peer to peer network of nodes (노드의 피어 투 피어 네트워크에서 실행되는 분산 데이터베이스)
+    - A database run by Satoshi Nakamoto (사토시 나카모토가 운영하는 데이터베이스)
+
+#### State Management (상태 관리) 
+![Genesis state](./image/State_Management_Genesis.png)
+    블록체인은 처음 시작할때 제네시스 상태로 시작
+    비트코인의 제네시스 상태는 퍼블릭 네트워크가 시작된 2009년에 발생
+    이더리움의 제네시스 상태는 2015년에 발생
+
+    블록체인의 모든 트랜잭션은 모든 노드에 복제되는 글로벌 상태를 수정한다.
+
+    < 문제 >
+    What is a genesis block? (제네시스 블록이란 무엇입니까?)
+    - The Book of Genesis on the blockchain (블록체인의 창세기)
+    - ✔ The initial state of the blockchain (블록체인의 초기 상태)
+    - The first transaction on the blockchain (블록체인의 첫 번째 트랜잭션)
+
+![Block_Transactions](./image/Block_Transactions.png)
+    수백만 개의 트랜잭션이 있기 때문에 트랜잭션은 블록으로 그룹화됩니다.
+    그래서 블록이라는 이름이 붙었습니다.
+    이러한 블록은 암호학적으로 검증 가능한 방식으로 서로 연결되어 있어 역사적으로 추적이 가능
+    네트워크의 현재 상태는 제네시스 블록에서 시작하여 지금까지의 각 블록의 정보에 따라서 상태를 전환하여 언제든지 다시 계산 가능
+
+    < 문제 >
+    Where are your cryptocurrency assets stored? (암호화폐 자산은 어디에 저장되나요?)
+    - In your digital wallet (디지털 지갑에)
+    - ✔ In 1000's of blockchain nodes (수천 개의 블록체인 노드에서)
+    - In your bank account (은행 계좌에서)
+#### Nodes (노드)
+    p2p(peer to Peer) - 중앙 서버를 거치지도 않고 클라이언트 컴퓨터끼리 직접 통신하는 방식을 통칭
+    
+    블록체인 네트워크는 컴퓨터 노드의 P2P 분산 네트워크를 통해서 자율적으로 관리된다.
+    네트워크의 각 노드를 글로벌 트랜잭션 원장의 사본을 보관하는 것으로 간단히 생각할 수 있습니다.
+    따라서 각 노드는 네트워크에서 발생하는 트랜잭션을 개별적으로 확인 및 감사하고 불법 행위가 없었는지 확인할 수 있다.
+
+    마이닝 노드라고 하는 또 다른 유형의 노드는 네트워크에서 생성되는 새로운 트랜잭션을 블록으로 그룹화하고 이를 검증하며 다른 모든 사람이 블록으로 글로벌 원장에 포함하도록 제안하는 역할을 합니다.
+    채굴은 계산적으로 어렵고 안전하게 수행하는 것이 매우 중요하여 블록이 승인된 채구루자는 노력에 대한 토큰 보상을 받습니다.
+
+    < 문제 >
+    What is a miner? (광부란 무엇입니까?)
+    - A node responsible for verifying and auditing transactions (트랜잭션을 확인하고 감사하는 노드입니다)
+    - Someone mining for gold underground (지하에서 금을 채굴)
+    - ✔ A node responsible for proposing new blocks - verifying transactions - and auditing transactions 
+    (새로운 블록을 제안하고, 트랜잭션을 검증하고, 트랜잭션을 감사하는 노드를 담당합니다)
+    
+    < 문제 >
+    Why do miners do hard work to secure the network? (블록체인 네트워크의 노드란 무엇입니까?)
+    - ✔ For block rewards (블록 보상의 경우)
+    - For goodwill (선의의 보상)
+    - For political reasons (정치적 이유)
+
+    블록체인의 사용은 각 가치 단위가 한 번만 전송되었음을 확인하고 Satoshi Nakamoto가 제시한 독창적인 메커니즘은 오랜 탈중앙화 이중 지출 문제를 해결했습니다.
+
+    < 문제 >
+    What is a node in a blockchain network? (블록체인 네트워크의 노드란 무엇입니까?)
+    - A programming language (프로그래밍 언어)
+    - A cryptocurrency token (암호화폐 토큰)
+    - ✔ A computer running the blockchain software (블록체인 소프트웨어를 실행하는 컴퓨터)
+
+#### Decentralization (분산)
+    피어 투 피어 노드 네트워크에 데이터를 저장함으로써 블록체인은 분산형 네트워크입니다
+    이는 데이터를 중앙 집중식으로 저장하는 기존 접근 방식에 비해 상당한 이점이 있습니다.
+    중앙 집중화 문제의 중요한 예가 있습니다.
+    
+    중앙 집중식 시스템의 데이터 유출은 많은 데이터를 노출시킵니다.
+    중앙 집중식 기관은 언론을 검열하고 차단할 수 있습니다.
+    중앙 원한에 대한 의존은 업스트립 문제가 다운스트림 소비자에게 영향을 미친다는 것을 의미합니다 
+    (AWS가 다운되면 대부분의 인터넷이 다운됨을 의미함)
+
+    < 문제 >
+    What does P2P mean? (P2P 무엇을 의미 합니까?)
+    - ✔ Peer to Peer (피어 투 피어)
+    - Product to Product (제품 대 제품)
+    - Password to Private Key (개인 키에 대한 암호)
+
+    반면에 분권화는 정반대의 이점을 가져옵니다.
+        - 귀하를 검열할 수 있는 단일 기관이나 중개인이 없으므로 검열이 없습니다.
+        - 전체 네트워크가 전 세계 1000개 노드에서 실행되므로 가동 중지 시간 없음
+        - 높은 공격 저항력으로 인해 데이터를 조작하거나 파괴할 수 없습니다.
+
+    사용 사례
+    - 암호화폐
+    - 스마트 계약
+    - 탈중앙화 금융
+    - 노름
+    - 공급망 추적
+    - 위조 방지
+    - 데이터 프라이버시
+    - 분산 거버넌스
+    - 확인 가능한 자산 소유권
+
+    < 문제 >
+    What are valid use cases for blockchain technology? (블록체인이 분할될 때의 용어는 무엇입니까?)
+    - Storing and transferring assets (자산 저장 및 전송)
+    - Participating in decentralized governance (탈중앙화 거버넌스에 참여)
+    - Tracking food items across the supply chain (공급망 전반에서 식품 품목 추적)
+    - ✔ All of the above (위의 모든 항목)
+
+#### Resources (자원)
+    블록체인에 대해 자세히 알아보려면 다음 리소스를 적극 권장합니다.
+
+    Must Watch
+    - But how does bitcoin actually work? by 3Blue1Brown (youtube.com/watch?v=bBC-nXj3Ng4)
+    - Blockchain Demo by Anders Brownworth (https://andersbrownworth.com/blockchain/)
+    
+    < 문제 >
+    What is the term for when a blockchain splits? (블록체인이 분할될 때의 용어는 무엇입니까?)
+    - ✔ Fork (포크)
+    - Spoon (숟가락)
+    - Merge (병합)
+    - Cut (컷)
