@@ -583,3 +583,88 @@ learnWeb3에서도 대시보드에서 암호지갑을 연결할 수 있다.
     Have you downloaded a wallet and set it up? (지갑을 다운로드 하고 설정하였나?)
     - ✔ Yes
     - No
+
+### 6. Setting up the Remix IDE
+#### 리믹스란?
+https://remix.ethereum.org
+이더리움 개발을 위한 오픈 소스 및 데스크탑 통합 개발 환경
+이더리움 구축을 시작하는 가장 쉬운 개발도구이며  확장 가능한 플러그인 아키텍처를 제공
+
+    < 문제 >
+    What does IDE stand for? (IDE는 무엇인가)
+    - ✔ Integrated Development Environment (통합 개발 환경)
+    - Intelligent Discord Environment (지능형 디스코드 환경)
+    - Intentional Developer Experience (의도적인 개발자 환경) 
+    - Irritated Developer Exasperation (짜증나는 개발자의 분노)
+
+Remix는 브라우저에서 직접 솔리디티 코드를 작성할 수 있도록 도와주며, 스마트 컨트랙트를 테스트, 디버깅 및 블록체인에 배포하기 위한 도구를 제공합니다.
+
+    < 문제 >
+    Remix allows you to write (리믹스에서 작성할 수 있는 것)
+    - Solidity Contracts (솔리디티 컨트랙트)
+    - Solidity Tests (솔리디티 테스트)
+    - Javascript Scripts (자바 스크립트)
+    - ✔ All of the above (위의 모든 항목)
+
+### 리믹스 탐색
+![리믹스](./image/리믹스 화면.png)
+
+![리믹스_워크플로우](./image/워크플로우.png)
+솔리디티를 배울 수 있도록 3가지 기본 스마트 계약이 제공된다
+
+![리믹스_컴파일러](./image/컴파일러.png)
+어떤 스마트 컨트랙트 프로그래밍 언어를 사용할지 선택할 수 있다
+
+리믹스에 있는 솔리디티를 제외한 다른 언어는 수준이 낮고 중간 컴파일을 위한것으로 하드우ㅞ어가 더 가깝다
+
+
+
+    < 문제 >
+    Which one of the following is not a panel in Remix? (리믹스의 패널이 아닌것은)
+    - File Explorer(파일 탐색기)
+    - ✔ Version Control History (버전 관리 기록)
+    - Solidity Compiler(솔리디티 컴파일러)
+
+리믹스는 브라우저에서 London Upgrade를 실행하는 이더리움 가상 시뮬레이터(EVM - Ethereum Virtual Machine)이 제공
+실제 이더리움 네트워크에 배포된 다른 계약에 의존하지 않는 한 스타트 계약을 빠르게 테스트하고 디버깅할 수 있다.
+고맙게도 스토리지 계약은 그렇지 않으므로 바로 여기 Remix VM에서 테스트
+
+    < 문제 >
+    Which of the following environments is NOT supported by Remix? (리믹스가 지원되지 않는 환경)
+    - Remix VM 
+    - Injected Provider
+    - ✔ Solana Testnet
+    - Wallet Connect
+
+와 함께 Remix는 테스트를 위해 모두 100 ETH가 로드된 일련의 가짜 계정을 만듭니다.Remix VM (London)
+
+드롭다운에서 계약을 선택하고 클릭하여 계약을 배포합니다.1_Storage.solDeploy
+
+컨트랙트가 배포되면 이제 스마트 컨트랙트에서 함수를 호출할 수 있는 섹션 아래에 표시됩니다.Deployed Contracts
+
+함수를 호출하면 Solidity의 정수에 대한 기본값인 right now 값이 반환됩니다.retrieve0
+
+
+참고 - 우리가 만든 이러한 함수 호출/트랜잭션 중 어느 것도 디지털 지갑(Metamask)을 열지 않았습니다. 이것은 우리가 현재 테스트 중이기 때문이며 이는 가짜 계정으로 작동하는 시뮬레이터일 뿐입니다. 실제 네트워크(테스트넷 또는 메인넷)에 배포할 때 디지털 지갑을 통해 거래를 확인하고 서명해야 합니다.ㅊ
+
+#### 권장
+Remix에 대해 자세히 알아보려면 다음을 권장합니다.
+
+Remix IDE Docs의 설명서를 살펴보세요. : https://remix-ide.readthedocs.io/en/latest/
+Remix와 함께 제공되는 기본 스마트 계약을 사용하여 작업 흐름을 처리하십시오
+
+    < 문제 >
+    You can write code on Remix in languages other than Solidity? (리믹스에서 솔리디티 이외의 언어로 코드를 작성할 수 있나요?)
+    - ✔ True
+    - False
+
+    < 문제 >
+    Which of the following features does Remix NOT support? (리믹스가 지원하지 않는 기능)
+    - Interacting with deployed smart contracts (배포된 스마트 컨트랙트와 상호작용)
+    - Importing code from Github repositories (깃허브 저장소에서 코드 가져오기)
+    - ✔ Providing free testnet ether (무료 테스트넷 이더 제공)
+
+    < 문제 >
+    Remix allows you to interact with contracts you did not deploy (리믹스를 사용하여 배포하지 않은 컨트랙트와 상호작용할 수 있나요?)
+    - ✔ True 
+    - False
