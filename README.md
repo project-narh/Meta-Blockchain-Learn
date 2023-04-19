@@ -484,3 +484,102 @@ https://www.investopedia.com/news/what-erc20-and-what-does-it-mean-ethereum/
     - ✔ Bitcoin
     - Ethereum
 
+### 5 - Setting up a crypto wallet 
+#### 주소란 무엇인가?
+조스는 블록체인에서 계정을 나타내기 위해서 암호화를 사용하여 생성된 택스트 문자열
+이주소는 다른 사람에게 공유할 수 있고 공유되어도 안전하다
+이를 통해서 자금을 송수신 가능하고 기본적으로 주소는 블록체인에서 고유 식별자이며 계정의 의미
+ex> 0x01573Df433484fCBe6325a0c6E051Dc62Ab107D1.
+    < 문제 >
+    What is an address? (주소란?)
+    - An address represents a crypto currency (주소는 암호화폐 통화를 나타냅니다)
+    - ✔ An address represents your account on the blockchain (주소는 블록체인에서 내 계정을 나타냅니다)
+    - an address represents your crypto balance (주소는 암호화폐의 잔액을 나타냅니다)
+
+    < 문제 >
+    Which one of the following is an Ethereum address? (다음 중 이더리움 주소는?)
+    - bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh
+    - ✔ 0x71C7656EC7ab88b098defB751B7401B5f6d8976F
+    - @LearnWeb3DAO
+
+#### 개인키란?
+주소에 대응하는 것으로 각 주소는 연결된 개인키가 존재
+이름에서 알 수 있듯이 개인키는 개인적인 것이며 공유하면 안된다
+
+주소의 소유권을 증명할 수 있는 여러 개의 문자와 숫자가 포함된 강력한 비밀번호
+개인키를 가진 사람은 누구나 내 주소로 거래가 가능
+즉 다른 사람이 내 개인키를 안다면 이를 통해 자금을 움직이는것이 가능
+ex> E9873D79C6D87DC0FB6A5778633389F4453213303DA61F20BD67FC233AA33262
+
+주소를 계정의 사용자 이름이라고 생각한다면 개인 키는 계정의 비밀번호
+주소를 공유하는것은 문제가 안되고 괜찮지만 개인키는 절대로 금물
+
+    < 문제 >
+    What is a private key? (개인키란?)
+    - ✔ Private key is like a strong password for your account (개인 키는 계정의 강력한 비밀번호)
+    - Private key is another name for an address (개인 키는 주소의 다른 이름)
+    - Private key refers to a crypto wallet (개인 키는 암호화폐 지갑을 의미)
+
+#### 주의
+블록체인은 탈중앙화되어 있기 때문에 비밀번호 분실 옵션이 없다
+개인 키를 분실하면 계정에 액세스할 수 없다
+개인키를 도용하여 자금을 훔쳐가더라도 조치를 취할 수 없다
+
+개발자의 경우 자체 스마트 컨트랙트를 이더리움 네트워크에 배포하는 등 특정 트랜잭션을 수행하기 위해서 코드베이스의 일부로 개인키를 사용하는 경우가 많다
+아직 배우는 단계라면 자금을 저장하는데 사용하는 계정과 개발용 계정을 별로로 두는것이 좋다.
+실수로 코드베이스를 공개적으로 공유하는 경우가 많고 해커가 코드 베이스의 개인키를 보고 자금을 탈취할 수 있다.
+
+    < 문제 >
+    What should you do with your private key? (개인키로 무엇을 해야 하나요?)
+    - You should share your private key with everyone (개인 키를 모든 사람과 공유)
+    - You should share your private key with only your friends and family (개인키를 친구 및 가족과 공유)
+    - ✔ You should never share your private key (개인키를 공유하면 안됨)
+
+#### 시드 문구란?
+시드문구는 마스터 비밀번호로 비밀번호의 비밀번호
+암호 지갑은 여러 블록체인 계정을 관리할 수 있는 일종의 암호관리자
+개인키가 단일 계졍의 암호인 경우 시드 문구는 해당 지갑의 마스터 암호와 비슷 
+
+    < 문제 >
+    What is a seed phrase? (시드 문구란 무엇인가?)
+    - Seed phrase is like a password for your address (시드 문구는 주소의 비밀번호)
+    - ✔ Seed phrase is like a master password for your crypto wallet (암호화폐 지갑의 마스터 비밀번호)
+    - Seed phrase is like a password for private key (개인키의 비밀번호)
+
+새 암호 지갑을 만들때 안전하게 저장하고 백업해야 하는 시드 문구가 생성된다.
+해당 지갑 내부에서 생성하는 모든 새 계정은 모두 시드 문구에 연결
+이 하나의 시드 문구는 각각에 대해 동일한 개인 키와 주소를 사용하여 항상 동일한 계정을 생성
+
+예를들어 지갑을 만들고 그안에 5개의 계정을 만들면 시드문구가 5개 모두 관리
+새 지갑으로 전환하려면 개별 개인 키를 사용하여 5개의 지갑으로 개별적으로 가져와야 한다.
+
+또 시드 문구를 사용해서 가져오면 동일한 5개의 계정이 재생성
+ex> dove lumber quote board young robust kit invite plastic regular skull history
+
+    < 문제 >
+    What is an example of seed phrase? (시드 문구의 예는 무엇인가요?)
+    - correct horse battery staple 
+    - Y123456789
+    - ✔ jealous expect hundred young unlock disagree major siren surge acoustic machine catalog
+
+#### 암호화폐 지갑이란
+계정 및 주로 개인 키의 관리자
+탈중앙화 애플리케이션과 상호작용이 가능하고 지갑을 통해서 dapp에 연결하여 블록체인에 구축된 모든 애플리케이션에 대한 싱글사인온 역할을 한다
+learnWeb3에서도 대시보드에서 암호지갑을 연결할 수 있다.
+
+    < 문제 >
+    What is a crypto wallet? (암호화폐 지갑이란 무엇인가요)
+    - Crypto wallet manages your seed phrases (시드 문구를 관리)
+    - ✔ Crypto wallet manages the private keys associated with your addresses (주소와 연결된 개인 키를 관리)
+    - Crypto wallet manages your crypto balance (암호화폐 잔액을 관리)
+
+    < 문제 >
+    What is MetaMask? (메타 마스크란?)
+    - ✔ An Ethereum wallet (이더리움 지갑)
+    - A Bitcoin wallet (비트코인 지갑)
+    - A Solana wallet (솔라나 지갑)
+
+    < 문제 >
+    Have you downloaded a wallet and set it up? (지갑을 다운로드 하고 설정하였나?)
+    - ✔ Yes
+    - No
