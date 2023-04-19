@@ -613,6 +613,7 @@ Remix는 브라우저에서 직접 솔리디티 코드를 작성할 수 있도�
 솔리디티를 배울 수 있도록 3가지 기본 스마트 계약이 제공된다
 
 ![리믹스_컴파일러](./image/컴파일러.png)
+
 어떤 스마트 컨트랙트 프로그래밍 언어를 사용할지 선택할 수 있다
 
 리믹스에 있는 솔리디티를 제외한 다른 언어는 수준이 낮고 중간 컴파일을 위한것으로 하드우ㅞ어가 더 가깝다
@@ -668,3 +669,314 @@ Remix와 함께 제공되는 기본 스마트 계약을 사용하여 작업 흐�
     Remix allows you to interact with contracts you did not deploy (리믹스를 사용하여 배포하지 않은 컨트랙트와 상호작용할 수 있나요?)
     - ✔ True 
     - False
+
+### 7. Intro to Solidity
+#### 솔리디티란?
+스마트 컨트랙트를 구현하기 위한 객체지향적인 고급언어
+이더리움 가상 머신(EVM)을 대상으로 설계
+정적으로 입력되며 상속, 라이브러리 및 복잡한 사용자 유형을 다른 기능 중에서 지원
+
+    < 문제 >
+    On which virtual machine does Solidity run? (솔리디티가 실행되는 가상 머신은?)
+    - JVM
+    - ✔ EVM
+    - KVM
+#### Building in Solidity
+##### 스마트 계약 초기화
+``` 초기화
+// Define the compiler version you would be using
+pragma solidity ^0.8.10;
+
+// Start by creating a contract named HelloWorld
+contract HelloWorld {
+
+}
+```
+
+##### 변수 및 유형
+3가지 유형의 변수
+- Local : 함수 내에서 선언되며 함수가 종료되면 소멸
+- State : 함수 외부에서 선언되며 계약이 생성될 때 생성되며 계약이 종료될 때까지 유지 (블록체인에 저장)
+- Global : 모든 함수에서 사용할 수 있으며 Solidity에서 제공 (트랙잭션 발신자, 블록 타임 스탬프, 블록 해시 등)
+
+변수의 범위는 값이 아니라 선언된 위치에 따라서 정의 된다
+지역 변수의 값을 전역 변수로 설정해도 해당 범위 내에서만 액세스할 수 있으므로 전역 변수가 되지는 않는다.
+
+    < 문제 >
+    What are state variables in Solidity? (솔리디티 상태 변수는 무엇인가)
+    - They are declared inside a function and are not stored on blockchain (함수 내에서 선언되며 블록체인에 저장되지 않습니다)
+    - ✔ They are declared outside a function and stored on the blockchain (그것들은 함수 외부에서 선언되고 블록체인에 저장)
+    - They provide information about the blockchain (블록체인에 대한 정보를 제공합니다)
+
+``` 전문
+// Define the compiler version you would be using
+pragma solidity ^0.8.10;
+
+// Start by creating a contract named Variables
+contract Variables {
+    /*
+        ******** State variables **********
+    */
+    /*
+    uint stands for unsigned integer, meaning non negative integers
+    different sizes are available. Eg
+        - uint8   ranges from 0 to 2 ** 8 - 1
+        - uint256 ranges from 0 to 2 ** 256 - 1
+    `public` means that the variable can be accessed internally
+     by the contract and can also be read by the external world
+    */
+    uint8 public u8 = 10;
+    uint public u256 = 600;
+    uint public u = 1230; // uint is an alias for uint256
+
+    /*
+    Negative numbers are allowed for int types. Eg
+    - int256 ranges from -2 ** 255 to 2 ** 255 - 1
+    */
+    int public i = -123; // int is same as int256
+
+    // address stands for an ethereum address
+    address public addr = 0xCA35b7d915458EF540aDe6068dFe2F44E8fa733c;
+
+    // bool stands for boolean
+    bool public defaultBoo1 = false;
+
+    // Default values
+    // Unassigned variables have a default value in Solidity
+    bool public defaultBoo2; // false
+    uint public defaultUint; // 0
+    int public defaultInt; // 0
+    address public defaultAddr; // 0x0000000000000000000000000000000000000000
+
+    function doSomething() public {
+        /*
+        ******** Local variable **********
+        */
+        uint ui = 456;
+
+        /*
+        ******** Global variables **********
+        */
+
+        /*
+            block.timestamp tells us whats the timestamp for the current block
+            msg.sender tells us which address called the doSomething function
+        */
+        uint timestamp = block.timestamp; // Current block timestamp
+        address sender = msg.sender; // address of the caller
+    }
+}
+```
+
+    < 문제 >
+    What does uint stand for? (uint가 의미하는 것)
+    - University Intelligence (대학 정보)
+    - Universal Interrogation (보편적인 신문)
+    - Universal Integer (범용 정수)
+    - ✔ Unsigned Integer (부호 없는 정수)
+
+    < 문제 >
+    What is the range of uint8? (uint8의 범위는?)
+    - 0 to 2 ** 256 - 1
+    - 0 to 2 ** 16 - 1
+    - ✔ 0 to 2 ** 8 - 1 (0에서 2 ** 8 - 1까지)
+
+    < 문제 >
+    What is the default value of an bool variable? (bool 변수의 기본값은?)
+    - true
+    - ✔ false
+
+    < 문제 >
+    What is the default value of an address variable? (주소 변수의 기본값은?)
+    - 0x0936f87C98E8009f8C4fff9E3994b295761C30ad
+    - ✔ 0x0000000000000000000000000000000000000000
+    - 0xD9cd57AaECf5813FC41E26CFd55f67Fd72112b75
+
+#### 함수, 루프 및 if/else
+``` 전문
+// Define the compiler version you would be using
+pragma solidity ^0.8.10;
+
+// Start by creating a contract named Conditions
+contract Conditions {
+    // State variable to store a number
+    uint public num;
+
+    /*
+        Name of the function is set.
+        It takes in an uint and sets the state variable num.
+        It is declared as a public function meaning
+        it can be called from within the contract and also externally.
+    */
+    function set(uint _num) public {
+        num = _num;
+    }
+
+    /*
+        Name of the function is get.
+        It returns the value of num.
+        It is declared as a view function meaning
+        that the function doesn't change the state of any variable.
+        view functions in solidity do not require gas.
+    */
+    function get() public view returns (uint) {
+        return num;
+    }
+
+    /*
+        Name of the function is foo.
+        It takes in an uint and returns an uint.
+        It compares the value of x using if/else
+    */
+    function foo(uint x) public returns (uint) {
+        if (x < 10) {
+            return 0;
+        } else if (x < 20) {
+            return 1;
+        } else {
+            return 2;
+        }
+    }
+
+    /*
+        Name of the function is loop.
+        It runs a loop till 10
+    */
+    function loop() public {
+        // for loop
+        for (uint i = 0; i < 10; i++) {
+            if (i == 3) {
+                // Skip to next iteration with continue
+                continue;
+            }
+            if (i == 5) {
+                // Exit loop with break
+                break;
+            }
+        }
+    }
+
+
+}
+```
+
+    < 문제 >
+    What is the significance of public keyword in the function definition ? (public 키워드의 의미는?)
+    - Function can only be called internally by the other smart contract functions (함수는 다른 스마트 계약 함수 내부에서만 외부로 호출할 수 있습니다)
+    - Function can only be called externally (함수의 외부에서만 호출 할 수 있습니다)
+    - ✔ It can be called from within the contract and also externally. (계약 내부 및 외부에서 호출 할 수 있습니다)
+
+    < 문제 >
+    What is the significance of the view keyword in the function definition ? (view 키워드의 의미는?)
+    - It means that the function can change the state of contract (함수는 계약의 상태를 변경할 수 있습니다)
+    - ✔ Function cant change the state of the contract (함수는 계약의 상태를 변경할 수 없습니다)
+    - It makes any function gasless (함수를 가스 없이 만듭니다)
+
+#### 배열, 문자열
+Array는 컴파일 타임 고정 크기 또는 동적 크기를 가질 수 있다는
+``` 전문
+pragma solidity ^0.8.10;
+
+contract Array {
+
+    // Declare a string variable which is public
+    string public greet = "Hello World!";
+    // Several ways to initialize an array
+    // Arrays initialized here are considered state variables that get stored on the blockchain
+    // These are called storage variables
+    uint[] public arr;
+    uint[] public arr2 = [1, 2, 3];
+    // Fixed sized array, all elements initialize to 0
+    uint[10] public myFixedSizeArr;
+    /*
+        Name of the function is get
+        It gets the value of element stored in an array's index
+    */
+    function get(uint i) public view returns (uint) {
+        return arr[i];
+    }
+
+    /*
+     Solidity can return the entire array.
+     This function gets called with and returns an uint[] memory.
+     memory - the value is stored only in memory, and not on the blockchain
+              it only exists during the time the function is being executed
+
+     Memory variables and Storage variables can be thought of as similar to RAM vs Hard Disk.
+     Memory variables exist temporarily, during function execution, whereas Storage variables
+     are persistent across function calls for the lifetime of the contract.
+     Here the array is only needed for the duration while the function executes and thus is declared as a memory variable
+    */
+    function getArr(uint[] memory _arr) public view returns (uint[] memory) {
+        return _arr;
+    }
+
+     /*
+        This function returns string memory.
+        The reason memory keyword is added is because string internally works as an array
+        Here the string is only needed while the function executes.
+    */
+    function foo() public returns (string memory) {
+        return "C";
+    }
+
+    function doStuff(uint i) public {
+        // Append to array
+        // This will increase the array length by 1.
+        arr.push(i);
+        // Remove last element from array
+        // This will decrease the array length by 1
+        arr.pop();
+        // get the length of the array
+        uint length = arr.length;
+        // Delete does not change the array length.
+        // It resets the value at index to it's default value,
+        // in this case it resets the value at index 1 in arr2 to 0
+        uint index = 1;
+        delete arr2[index];
+        // create array in memory, only fixed size can be created
+        uint[] memory a = new uint[](5);
+        // create string in memory
+        string memory hi = "hi";
+    }
+
+ }
+```
+
+    < 문제 >
+    Which is the correct function definition for returning an unsigned integer array from a function ? (함수에서 부호없는 정수 배열을 반환하는 올바른 함수 정의는?)
+    - ✔ function getArr(uint[] memory _arr) public view returns (uint[] memory) 
+    - function getArr(uint[] memory _arr) public view returns (uint[])
+    - function getArr(uint[] memory _arr) public view returns ([]uint)
+
+    < 문제 >
+    How to get the length of an array in Solidity? (Solidity에서 배열의 길이를 얻는 방법은?)
+    - len(arr)
+    - ✔ arr.length
+    - arr.size()
+
+    < 문제 >
+    How to add an element to an array in Solidity? (Solidity에서 배열에 요소를 추가하는 방법은?)
+    - ✔ arr.push(i)
+    - arr.add(i)
+    - arr.back(i)
+
+#### 참조
+https://solidity-by-example.org/
+
+#### 추가 학습을 위한 리소스
+https://cryptozombies.io/
+https://solidity-by-example.org/
+https://docs.soliditylang.org/en/v0.8.17/
+
+    < 문제 >
+    What is msg.sender? (msg.sender는 무엇입니까?)
+    - ✔ address of the caller (발신자의 주소)
+    - a function name (함수 이름)
+    - phone number of the person who's texting you (당신에게 문자를 보내는 사람의 전화 번호)
+
+    < 문제 >
+    What is the value of block.coinbase? (block.coinbase의 값은?)
+    - The address of Coinbase's exchange (코인베이스 거래소의 주소)
+    - ✔ The address of the miner who mined that block (해당 블록을 채굴한 채굴자의 주소)
+    - The current gas price of the block (해당 블록의 현재 가스 가격)
