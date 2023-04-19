@@ -366,3 +366,121 @@ Web3의 특성
     Web3 is controlled by a few trusted entities (Web3는 신뢰할 수 있는 소수의 기관에 의해 제어됩니다.)
     - True
     - ✔False
+
+### 4 - What is ETH?
+#### What is ETH? (이더리움이란 무엇인가?)
+이더리움 : 스마트 컨트랙트를 지원하는 탈중앙화된 블록체인
+네트워크에서 비트코인 토큰 전송만 지원하는 비트코인과 다르게 보다 더 일반적인 용도로 사용
+
+개발자는 이더리움 가상머신 (EVM)을 통해서 네트워크에서 실행할 수 있는 분산형 애플리케이션, 즉 dapp을 구축
+따라서 이더리움의 글로벌 상태는 모든 계정의 잔액뿐만 아닌 각 dapp의 상태도 포함
+
+dapp은 이더리움의 프로그래밍 언어인 Solidity를 사용하여 작성
+솔리디티를 이용해서 스마트 콘트랙트를 작성하고 이더리움 네트워크에 스마트 콘트랙트를 배포할 수 있다.
+
+    < 문제 >
+    How are smart contracts executed? (스마트 컨트랙트는 어떻게 실행되나요?)
+    - On Ethereum servers (이더리움 서버에서)
+    - ✔ On the Ethereum Virtual Machine (EVM) (이더리움 가상 머신)
+    - Jeff Bezos runs them (제프 베조스가 운영)
+
+이더리움은 네트워크의 모든 컴퓨터에서 지분 증명(pos)을 통해서 합의를 유지한다
+2022년 9월에 도입된 Serenity 패치(세레니티 패치)를 통해서 이더리움은 Proof of Work(작업 증명)에서 Proof of Stake (지분 증명) 매커니즘으로 변경
+
+    < 문제 >
+    Ethereum currently uses which consensus algorithm? (이더리움은 어떤 합의 알고리즘을 사용하나요?)
+    - Proof of Work (작업 증명)
+    - ✔ Proof of Stake (지분 증명)
+    - Proof of Authority (권한 증명)
+
+    < 문제 >
+    In the Serenity patch... Ethereum moved from Proof of Work to Proof of Stake (Serenity 패치에서 이더리움은 작업 증명에서 지분 증명으로 이동했습니다.)
+    - ✔ True
+    - False
+
+#### 이더리움의 기초
+##### 역사
+이더리움은 원래 비트코인의 공동 창립자이자 젊은 프로그래머였던 비탈릭 부테린이 제안하였다
+2007년 부터 2010년까지 월드 오브 워크래프트를 즐겨했지만 원하지 않던 패치로 그만둠
+2011년 비트코인을 알게 되었고 이에 매료됨
+이에 기여하고 싶어서 기사당 몇 비트코인을 받는 대가로 비트코인에 대한 기사를 쓰기 시작
+2011년 말 비트코인 매거진을 공동 설립하고 암포화폐에 전념
+전세계를 돌며 다양한 암호화폐 프로젝트를 살펴보고 튜링이 완선된 범용 플밍 언어를 블록체인에 통합하면 대부분의 프로젝트 기능을 일반화할 수 있다는 사실을 알게 됨
+
+다른 개발자들과 비트코인 개발자들에게 블록체인 기술이 화폐 거래소보다 많은 영향을 미칠 수 있으며 블록체인에 범용 언어가 필요하다고 설득
+그리고 튜링이 완성된 솔리디티라는 언어로 새로운 블록체인 플랫폼을 개발하였고 이것이 이더리움
+
+2014년 공개적으로 발표되었고 핵심 팀은 비탈릭 부테린, 미하이 앨리스, 안토니 디 이오리오, 찰스 호스킨슨, 조 루빈, 개빈 우드로 구성
+몇달뒤 개발 자금을 위해 이더리움 토큰에 대한 초기 코인 공개(ICO)를 진행
+1800만 달러에 해당하는 31000 BTC를 모금하였고 이더리움 재단을 설립하여 스위스에 기반을 둔 비영리 재단으로 설립
+
+##### 이더란 무엇인가?
+이더리움에는 Ether, ETH라는 통화가 있다, 이 토큰을 이더리움 네트워크에서 거래에 대한 수수료로 지불하는데 필요
+    < 문제 >
+    What is the native currency of Ethereum? (이더리움의 기본 통화는 무엇인가요?)
+    - NEAR
+    - MATIC
+    - ✔ ETH
+    - BTC
+
+##### 스마트 컨트랙트란 무엇인가?
+중앙 코디네이터 없이 이더리움 네트워크의 모든 컴퓨터에서 복제되고 처리되는 작은 컴퓨터 프로그램
+이를 사용하면 컴퓨터 코드에 의해 자동으로 실행 될 수 있는 콘트랙트를 프로그래밍할 수 있다.
+
+    < 문제 >
+    If you write a smart contract on the Ethereum mainnet... it will be replicated and processed on all the computers on the Ethereum main network.
+    (이더리움 메인넷에서 스마트 콘트랙트를 작성하면 이더리움 메인 네트워크의 모든 컴퓨터에서 복제되어 처리됩니다.)
+    - ✔ True
+    - False
+
+이더리움의 범용적인 특성으로 이더리움 블록체인에서 실행되는 보안과 탈중앙화의 이점을 그래도 이어받은 다양한 애플리케이션이 이더리움 위에 구축 될 수 있다.
+
+##### ERC20 Tokens
+이더 외에도 사람들은 자신의 통화를 만들고 사용하는것이 가능
+이에 가장 맞는 형태는 ERC20 토큰
+특정 표준에 맞는 스마트 콘트랙트이다
+
+개발자는 표준을 넘어서 확장할 수 있지만 자체 토큰을 발행할때는 최소한의 요건을 충족해야 한다.
+표준화를 통해서 디지털 지갑은 토큰을 생성할 때마다 특수 코드를 만들 필요 없이 모든 유형의 토큰을 쉽게 지원할 수 있다.
+
+    < 문제 >
+    You can create your own ERC-20 token without the permission of Ethereum (이더리움의 허가 없이도 자신만의 ERC-20 토큰을 생성할 수 있습니다.)
+    - ✔ True
+    - False
+
+###### ERC721 and ERC1150 Tokens
+이들은 대체 불가능한 토큰 NFT라고 부른다,
+이 두 표준은 ERC20과 유사하게 NFT를 생성할때 충족해야 하는 요건에 대한 기준선
+이 둘은 비슷한 이점을 제공하고 지감과 NFT 마켓플레이스가 이 두 표준 중 하나를 따르기 때문에 모든 NFT 컬렉션과 즉시 호환될 수 있다. 
+
+##### 필수 읽기
+https://bitsonblocks.net/2016/10/02/gentle-introduction-ethereum/
+
+##### 추천 읽기
+https://ethereum.org/en/whitepaper/
+https://cointelegraph.com/explained/erc-20-tokens-explained
+https://www.youtube.com/watch?v=ZE2HxTmxfrI
+https://blockgeeks.com/guides/smart-contracts/
+https://www.investopedia.com/news/what-erc20-and-what-does-it-mean-ethereum/
+
+    < 문제 >
+    Which statement best describes Proof of Work? (작업 증명을 가장 잘 설명하는 문장은 어느 것입니까?)
+    - Miners with the most currency are allowed to mine and add blocks to the blockchain
+    (가장 많은 화폐를 보유한 채굴자는 블록체인에 블록을 채굴하고 추가할 수 있습니다.)
+
+    - ✔ Miners compete to solve computational puzzles. The winner of this competition gets to add a block to the blockchain.
+    (마이너들은 컴퓨터 퍼즐을 풀기 위해 경쟁합니다. 이 경쟁의 우승자는 블록체인에 블록을 추가할 수 있습니다.)
+
+    - Miners work to compute an EVM routing problem. The first miner to solve the problem gets to add blocks to the Blockchain
+    (채굴자는 EVM 라우팅 문제를 계산하기 위해 노력합니다. 문제를 가장 먼저 푸는 채굴자가 블록체인에 블록을 추가할 수 있습니다.)
+
+    < 문제 >
+    Who's "Block time" is shorter? (누구의 '차단 시간'이 더 짧은가요?)
+    - Bitcoin
+    - ✔ Ethereum
+
+    < 문제 >
+    Who's "Block size" is bigger? (누구의 "블록 크기"가 더 큰가요?)
+    - ✔ Bitcoin
+    - Ethereum
+
