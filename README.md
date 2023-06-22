@@ -980,3 +980,203 @@ https://docs.soliditylang.org/en/v0.8.17/
     - The address of Coinbase's exchange (코인베이스 거래소의 주소)
     - ✔ The address of the miner who mined that block (해당 블록을 채굴한 채굴자의 주소)
     - The current gas price of the block (해당 블록의 현재 가스 가격)
+
+============================================================================================================
+# 기말고사
+## Intro to React and Next.js
+
+🤔 What is the power of JSX? (JSX의 장점은?)
+- It is an extension of Javascript that adds static typing (JavaScript에 정적 타이핑을 추가하는 기능입니다. )
+- ✔ It is an extension of Javascript that allows you to return HTML elements from JS functions (JavaScript 함수에서 HTML 요소를 반환할 수 있는 기능을 추가합니다)
+- It is a web framework that helps you reason about the view of your app (앱의 뷰(view)에 대한 이해를 돕는 웹 프레임워크입니다.)
+
+What is composition? (구성이란 무엇입니까?)
+
+- ✔ It is the combination of multiple components to create a single hierarchial HTML document (단일 계층 HTML 문서를 생성하는 여러 구성 요소의 조합입니다.)
+- It is the dependency makeup of the React library (React 라이브러리의 종속성 구성입니다.) 
+- It is the official React song (이것은 공식 React 노래입니다)
+
+You can pass arbitrary data to components through props? (소품을 통해 구성 요소에 임의의 데이터를 전달할 수 있습니까?)
+ ✔ Yes
+No
+
+How do React components allow you to make your code easier to understand? (React 구성 요소를 사용하여 코드를 이해하기 쉽게 만드는 방법은 무엇입니까?)
+- By using Github Copilot to automatically generate code for you (Github Copilot을 사용하여 자동으로 코드 생성)
+-  ✔ By enabling reusability of components through data passing ("데이터 전달을 통해 컴포넌트의 재사용성을 가능하게 함으로써")
+- By using a simpler programming language (더 간단한 프로그래밍 언어를 사용함으로써)
+
+What will the above code do when run? (위의 코드는 실행될 때 무엇을 합니까?)
+Return the number 3 (숫자 3을 반환)
+ ✔ Crash due to an error (오류로 인한 충돌)
+
+In the above code, what happens when you click on the Increment button? (위의 코드에서 증분 버튼을 클릭하면 어떻게 됩니까?)
+- ✔ The view of the app will be updated to display the new incremented value of num (앱의 보기가 업데이트되어 새로 증분된 num 값을 표시합니다.)
+- Nothing will happen (아무것도 안 일어날거야)
+- The app will crash (앱이 다운됩니다)
+
+In the above code, what happens when the Start button is clicked? (위의 코드에서 시작 버튼을 클릭하면 어떻게 됩니까?)
+- The value of num is incremented by one and the HTML view is updated to display the new value
+- Nothing happens
+- ✔ The React app gets stuck in an infinite loop (React 앱이 무한 루프에 빠집니다.)
+
+Why are state variables (useState) used in React? (React에서 상태 변수(useState)를 사용하는 이유는 무엇인가요?)
+- ✔ They are used to mai (그들은 유지 보수를 위해 사용됩니다)
+- ntain values that re-render the HTML whenever the value changes
+- They are just syntactical sugar and serve no real purpose
+- They are the only way to define variables in React components
+
+useEffect hook can only be run when the page first loads? (useEffect 훅은 페이지가 처음로드될 때만 실행될 수 있나요)
+- True
+- ✔ False
+
+useEffect can only be dependent on one value? (useEffect는 하나의 값에만 의존해야 할까요?)
+- True
+- ✔ False
+
+What is a difference between useRef and useState? (useRef와 useState의 차이점은 무엇입니까?)
+- Updates to reference variables are done synchronously whereas updates to state variables are done asynchronously
+- There is no difference
+- ✔ useRef is only used for referencing DOM elements whereas useState is used for maintaining variable values (useRef는 DOM 요소를 참조하는 데만 사용되는 반면 useState는 변수 값을 유지하는 데 사용됩니다.)
+
+What is the main difference between React and Next.js when it comes to routing between webpages? (웹 페이지 간 라우팅과 관련하여 React와 Next.js의 주요 차이점은 무엇입니까?)
+- React does file based routing automatically whereas Next requires a routing library
+- They're the exact same
+- ✔ React requires a routing library whereas Next does file based routing automatically (React는 라우팅 라이브러리가 필요한 반면 Next는 파일 기반 라우팅을 자동으로 수행합니다.)
+
+How do you write REST API endpoints in Next.js applications? (Next.js 애플리케이션에서 REST API 끝점을 어떻게 작성합니까?)
+- By creating files within the pages/ subdirectory
+- ✔ By creating files within the pages/api/ subdirectory (pages/api/ 하위 디렉토리 내에 파일 생성)
+- By creating files within the api/ subdirectory
+
+React components must begin with an uppercase letter when being used in JSX? (React 구성 요소는 JSX에서 사용할 때 대문자로 시작해야 합니까?)
+- ✔ True
+- False
+
+## What is Gas, and why is it needed?
+The cheapest transaction on the Ethereum network is the transfer of $ETH (이더리움 네트워크에서 가장 저렴한 트랜잭션은 $ETH의 전송입니다.)
+- ✔ True
+- False
+
+If Alice wants to send Bob 1 ETH, assuming the gas price is 100 Gwei, how much ETH does Alice pay in transaction fees (assume pre-London ugprade)? 
+(Alice가 Bob에게 1 ETH를 보내고 싶다면 가스 가격이 100 Gwei라고 가정하면 Alice는 거래 수수료로 얼마의 ETH를 지불합니까(런던 이전의 ugprade를 가정)?)
+- ✔ 0.0021 ETH
+- 2100000 ETH
+- 0.021 ETH
+
+A transaction that costs 100 Gwei today can cost 200 Gwei tomorrow (오늘 비용이 100Gwei인 거래가 내일은 200Gwei가 될 수 있습니다.)
+- ✔ True
+- False
+
+The value of the gas price for a transaction was fixed before the London-upgrade. (거래에 대한 가스 가격의 가치는 런던 업그레이드 이전에 고정되었습니다.)
+- True
+- ✔ False
+
+The London Fork took place in Ethereum's London servers (런던 포크는 이더리움의 런던 서버에서 진행되었습니다.)
+- True
+- ✔ False
+
+Which of the fees is the minimum needed to send a transaction to the network after the London fork? (런던 분기 후 네트워크에 거래를 보내는 데 필요한 최소 수수료는 얼마입니까?)
+- ✔ Base Fees (기본 요금)
+- Priority Fees
+- Gas Price
+- Network Fee
+
+You can change/choose the max gas fee you want to pay for a transaction using a wallet like Metamask (Metamask와 같은 지갑을 사용하여 트랜잭션에 대해 지불하려는 최대 가스 수수료를 변경/선택할 수 있습니다.)
+- ✔ True
+- False
+
+What is the max block size limit possible on the Ethereum network today? (오늘날 이더리움 네트워크에서 가능한 최대 블록 크기 제한은 무엇입니까?)
+- 10M Gas
+- ✔ 30M Gas
+- 15M Gas
+- 20M Gas
+
+Which version of the Ethereum network provided better gas estimations for the network? (이더리움 네트워크의 어떤 버전이 네트워크에 더 나은 가스 추정치를 제공했습니까?)
+Pre-London Fork
+ ✔ Post-London Fork (포스트 런던 포크)
+
+The concept of gas fees is bad for the network (가스 요금의 개념은 네트워크에 좋지 않습니다.)
+True
+ ✔ False
+
+## What is mining, and why is it done?
+What consensus mechanism does Ethereum currently use? (이더리움은 현재 어떤 합의 메커니즘을 사용합니까?)
+- Proof of Work
+- ✔ Proof of Stake
+- Proof of Authority
+- Proof of Space
+
+Miners exist in the network to ensure that users can be controlled (광부는 네트워크에 존재하여 사용자를 제어할 수 있습니다.)
+- True
+- ✔ False
+
+Miners are paid to mine the blocks (광부들은 블록을 채굴하기 위해 돈을 받습니다)
+- ✔ True
+- False
+
+The mining reward for Ethereum is roughly: (Ethereum의 채굴 보상은 대략 다음과 같습니다.)
+- ✔ 2 ETH/Block
+- 5 ETH/Block
+- 1 ETH/Block
+- 3 ETH/Block
+
+It is very profitable to be a miner; for anybody (광부가 되는 것은 매우 유익합니다. 누구에게나)
+- True
+- ✔ False
+
+Mempool is the list of transactions that have been mined (Mempool은 채굴된 트랜잭션 목록입니다)
+- True
+- ✔ False
+
+Which is a more profitable method of mining? (더 수익성 있는 채굴 방법은 무엇입니까?)
+- Using CPUs
+- ✔ Using GPUs
+- Using APUs
+
+Which is the chip that was specifically designed to mine Ethereum? (Ethereum을 채굴하도록 특별히 설계된 칩은 무엇입니까?)
+- APUs
+- ✔ ASICs
+- GPUs
+
+Mining pools help individual miners combine their computational effort to increase the chances of mining blocks. (마이닝 풀은 개별 마이너가 컴퓨팅 작업을 결합하여 블록을 마이닝할 가능성을 높이는 데 도움이 됩니다.)
+- ✔ True
+- False
+
+Ethereum shifted to Proof of Authority in 2022 (이더리움은 2022년에 권한 증명으로 전환되었습니다.)
+- True
+- ✔ False
+
+## How does Proof of Work work
+Which of the following is false about Proof of Work? (다음 중 작업 증명에 대한 설명으로 옳지 않은 것은?)
+- Miners are responsible for ensuring no new user tries to become a miner
+- ✔ Miners are responsible for producing new blocks on the blockchain network (채굴자는 블록체인 네트워크에서 새로운 블록을 생산할 책임이 있습니다.)
+- Miners are responsible for ensuring that the network is not tampered with
+
+What is a sybil attack? (시빌 공격이란?)
+- ✔ An attack where a user or a group pretends to be many users or groups (사용자 또는 그룹이 여러 사용자 또는 그룹인 것처럼 가장하는 공격)
+- An attack where the network is brought down by a high traffic of requests to it's servers
+
+What are uncle blocks? (삼촌 블록은 무엇입니까?)
+
+- ✔ Blocks that were mined but discarded due to a fork (채굴되었지만 포크로 인해 버려진 블록)
+- Blocks that were mined before a child block
+
+
+
+
+Why is finding the value of the nonce good enough for Proof of Work? (왜 Proof of Work에서 nonce의 값을 찾는 것만으로도 충분한 것일까요)
+
+- ✔ Because it is computationally hard to find a value for it, but very easy to verify if a given value is valid or not (값을 찾는 것은 계산적으로 어렵지만 주어진 값이 유효한지 여부를 확인하는 것은 매우 쉽기 때문입니다.)
+- Because the nonce is a secret value known only by honest miners who cannot lie
+
+## How does Proof of Stake work?
+
+How often are new blocks produced on Proof of Stake Ethereum? (Proof of Stake Ethereum에서 새 블록이 얼마나 자주 생성됩니까?)
+- 10 Seconds
+- ✔ 12 Seconds
+- 15 Seconds
+- 30 Seconds
+
+How is finality achieved on Proof of Stake Ethereum? (이더리움 지분 증명에서 최종성은 어떻게 달성됩니까?)
+- ✔ Voting on checkpoint blocks at every epoch (모든 시대의 체크포인트 블록에 대한 투표)
+- Waiting for at least six blocks
